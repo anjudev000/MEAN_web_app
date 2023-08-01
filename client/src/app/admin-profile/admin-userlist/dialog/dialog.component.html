@@ -1,0 +1,35 @@
+
+  <h1 mat-dialog-title>Add User</h1>
+  <div mat-dialog-content>
+    <form [formGroup]="userForm">
+      <p style="margin-top: 5px;">
+        <mat-form-field appearance="outline">
+          <mat-label>Full Name</mat-label>
+          <input formControlName="fullName" matInput placeholder="Enter full Name">
+          <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+         
+        </mat-form-field>
+        <p style="margin-top: 5px;">
+          <mat-form-field appearance="outline">
+            <mat-label>Email</mat-label>
+            <input formControlName="email" matInput placeholder="Enter email">
+            <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+           
+          </mat-form-field>
+          <p style="margin-top: 5px;">
+            <mat-form-field appearance="outline">
+              <mat-label>Password</mat-label>
+              <input type="password" formControlName="password" matInput placeholder="Enter password">
+              <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+             
+            </mat-form-field>
+           
+          </p>
+    </form>
+  </div>
+  <div mat-dialog-action [align]="'end'">
+    <button mat-raised-button color="warn" mat-dialog-close>Close</button>
+    <button style="margin-left: 8px;" mat-raised-button color="primary" (click)="addUser()">Save</button>
+
+  </div>
+  

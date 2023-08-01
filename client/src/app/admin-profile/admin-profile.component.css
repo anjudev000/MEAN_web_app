@@ -1,0 +1,76 @@
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';  
+.example-spacer {
+  flex: 1 1 auto;
+}
+/* 
+html{
+  background-color : white;
+} */
+h1 {
+  text-align: center;
+  font-weight: bold;
+  color: blue;
+}
+
+
+.profile-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile-heading {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.profile-card {
+  display: flex;
+  align-items: center;
+  width: 800px;
+  justify-content: center;
+  
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  padding: 20px;
+}
+
+.profile-picture {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 20px;
+}
+
+.profile-picture img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.profile-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.profile-info {
+  margin-bottom: 10px;
+}
+
+.info-label {
+  font-weight: bold;
+  color: white;
+  font-size: larger;
+}
+.container{
+  background-image: url(https://img.freepik.com/premium-vector/global-network-connection_302149-230.jpg?w=900);
+/* height: 500px; */
+min-height: 100vh;
+background-repeat: no-repeat;
+background-size: cover;
+background-position: center;
+
+
+}
+

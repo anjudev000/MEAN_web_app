@@ -1,0 +1,32 @@
+<div class="container">
+<p>
+  <mat-toolbar color="primary">
+   
+    <span>Admin Profile</span>
+    <span class="example-spacer"></span>
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon"
+    (click)="navigateToUserList()">
+      <mat-icon>supervised_user_circle</mat-icon>
+    </button>
+   
+    <button mat-raised-button color="warn" (click)="onLogout()">Logout</button>
+  </mat-toolbar>
+</p>
+<div >
+  <h1>WELCOME TO ADMIN PROFILE</h1>
+<div class="profile-container">
+   
+  <div class="profile-card">
+    
+    <div class="profile-details">
+      
+     
+      
+      <div class="profile-info">
+        <span class="info-label">Email:  {{adminDetails}}</span>
+        <span class="info-value"></span>
+      </div>
+    </div>
+  </div>
+</div>
+</div>

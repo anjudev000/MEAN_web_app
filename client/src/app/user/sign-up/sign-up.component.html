@@ -1,0 +1,44 @@
+<div>
+  <img src="/assets/img/sign-up.png" id="icon" alt="User Icon" />
+</div>
+
+
+<form #signUpForm="ngForm" (ngSubmit)="onSubmit(signUpForm)" enctype="multipart/form-data">
+  <!-- fullname -->
+<input type="text" #fullName="ngModel" [(ngModel)]="user.fullName" name="fullName" placeholder="Full Name"
+ required [ngClass]="{'invalid-textbox':signUpForm.submitted && !fullName.valid}">
+ <div *ngIf="signUpForm.submitted && !fullName.valid">
+  <label class="validation-message">Name cannot be empty</label>
+ </div>
+ <!-- email -->
+<input type="text" #email="ngModel" [(ngModel)]="user.email" name="email" placeholder="Email"
+required [pattern]="emailRegex" [ngClass]="{'invalid-textbox':signUpForm.submitted && !email.valid}">
+<div *ngIf="signUpForm.submitted && email.errors">
+<label *ngIf="email.errors?.['required']"  class="validation-message">Email is required</label>
+<label *ngIf="email.errors?.['pattern']"class="validation-message">Invalid email address</label>
+</div>
+<!-- password -->
+<input type="password" #password="ngModel" [(ngModel)]="user.password" name="password" placeholder="Password"
+minlength="4" required [ngClass]="{'invalid-textbox':signUpForm.submitted && !password.valid}">
+<div *ngIf="signUpForm.submitted && password.errors">
+<label *ngIf="password.errors?.['required']" class="validation-message">Password is required</label>
+<label *ngIf="password.errors?.['minlength']"  class="validation-message">Not a valid Password</label>
+</div>
+
+<!-- profile pic -->
+<input type="file" (change)="onFileSelected($event)" accept="image/*" class="profile-pic-input">
+
+
+<!-- submit button -->
+<input type="submit" value="Sign Up">
+</form>
+
+<!-- success message -->
+<div class="success" *ngIf="showSuccessMessage">
+Saved successfully!
+</div>
+
+<!-- error messages -->
+<div class="alert" *ngIf="showErrorMessage">
+  {{showErrorMessage}}
+</div>

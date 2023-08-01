@@ -1,0 +1,61 @@
+
+.example-spacer {
+  flex: 1 1 auto;
+}
+table {
+  width: 100%;
+}
+
+.mat-mdc-form-field {
+  font-size: 14px;
+  width: 100%;
+}
+
+/* td, th {
+  width: 25%;
+} */
+.container{
+  max-width: 1200px;
+  margin: 0 auto;
+}
+section {
+  display: table;
+}
+
+.example-label {
+  display: table-cell;
+  font-size: 14px;
+  margin-left: 8px;
+  min-width: 120px;
+}
+
+.example-button-row {
+  display: table-cell;
+  max-width: 600px;
+}
+
+.example-button-row .mat-mdc-button-base {
+  margin: 8px 8px 8px 0;
+}
+
+.example-flex-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.example-button-container {
+  display: flex;
+  justify-content: center;
+  width: 120px;
+}
+.container-box{
+  background-image: url(https://img.freepik.com/premium-vector/global-network-connection_302149-230.jpg?w=900);
+/* height: 500px; */
+min-height: 100vh;
+background-repeat: no-repeat;
+background-size: cover;
+background-position: center;
+
+
+}

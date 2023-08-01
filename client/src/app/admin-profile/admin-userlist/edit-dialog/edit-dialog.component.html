@@ -1,0 +1,23 @@
+<h1  mat-dialog-title>EDIT USER</h1>
+
+  <div  mat-dialog-content>
+    <mat-form-field appearance="outline">
+      <mat-label>Full Name</mat-label>
+      <input matInput placeholder="Enter full Name">
+      <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+    </mat-form-field>
+  
+    <mat-form-field appearance="outline">
+      <mat-label>Email</mat-label>
+      <input matInput placeholder="Enter email">
+      <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+    </mat-form-field>
+  </div>
+
+<div mat-dialog-action [align]="'end'">
+  <button mat-raised-button color="warn" mat-dialog-close>CLOSE</button>
+  <button style="margin-left: 8px;" mat-raised-button color="primary">UPDATE</button>
+</div>
+
+
+

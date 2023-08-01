@@ -1,0 +1,35 @@
+
+
+<div class="container">
+<mat-card>
+  <mat-card-title style="margin-bottom: 40px;margin-left: 20px;" class="admin-login-title">Admin Login</mat-card-title>
+  <mat-card-content>
+       <form class="example-form" #login="ngForm" (ngSubmit)="login.valid && onSubmit(login)">
+        <mat-form-field class="example-full-width">
+          <mat-label>Email</mat-label>
+          <input type="text" name="email" #email="ngModel"
+           [(ngModel)]="model.email" 
+           [pattern]="emailRegex" required
+           matInput placeholder="enter your mail">
+        </mat-form-field><br>
+        <div *ngIf="login.submitted && email.errors?.['pattern']">
+          <label class="validation-message">Invalid Email Address</label>
+        </div>
+        <mat-form-field class="example-full-width">
+          <mat-label>Password</mat-label>
+          <input type="password" name="password" #password="ngModel" 
+          [(ngModel)]="model.password" required minlength="4" matInput placeholder="enter your mail">
+        </mat-form-field>
+        <div *ngIf="login.submitted && password.errors?.['minlength']">
+          <label class="validation-message">Invalid Password</label>
+        </div>
+        <div class="button">
+          <button type="submit" mat-button>Login</button>
+        </div>
+    </form>
+  </mat-card-content>
+  <div *ngIf="serverErrorMessages" class="alert">
+    {{serverErrorMessages}}
+  </div>
+</mat-card>
+</div>
